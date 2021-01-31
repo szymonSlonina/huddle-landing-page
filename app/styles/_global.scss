@@ -1,0 +1,183 @@
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $backgroundColor;
+    background-image: url("/images/illustration-mockups.svg"), url("/images/bg-mobile.svg"), url("/images/logo.svg");
+    background-repeat: no-repeat;
+    background-size: 300px, auto, 150px 50px;
+    background-position: center 120px, center 0px, calc(50% - 75px) 20px;
+
+    @media screen and(min-width: $widthMobile) {
+        background-image: url("/images/illustration-mockups.svg"), url("/images/bg-desktop.svg"),
+            url("/images/logo.svg");
+        background-size: 700px, cover, 200px 50px;
+        background-position: 10% center, center 0px, 6% 50px;
+    }
+
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    font-family: $bodyFont;
+    font-weight: $bodyFontWeight1;
+
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 400px 1fr 50px;
+    grid-template-areas:
+        "."
+        "cont"
+        "footer";
+    justify-content: center;
+
+    @media screen and (min-width: $widthMobile) {
+        grid-template-columns: 56% 38%;
+        grid-template-rows: 1fr 50px;
+        grid-template-areas:
+            ". cont"
+            "footer footer";
+        align-items: center;
+    }
+}
+
+#content {
+    grid-area: cont;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    @media screen and (min-width: $widthMobile) {
+        height: 100%;
+        padding-top: 200px;
+        align-items: flex-start;
+        text-align: start;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    div {
+        height: 100px;
+        width: 120px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        div {
+            height: 30px;
+            width: 30px;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+
+        @media screen and (min-width: $widthMobile){
+            height: 100%;
+            width: 100%;
+            justify-content: flex-end;
+
+            div {
+                height: 40px;
+                width: 40px;
+                margin-right:20px;
+            }
+        }
+    }
+
+    h1 {
+        font-family: $headingFont;
+        margin-bottom: 0px;
+    }
+
+    button {
+        width: 60%;
+        height: 50px;
+        border: none;
+        border-radius: 30px;
+        color: $fontViolet;
+        font-size: 0.8rem;
+        font-weight: 600;
+        box-shadow: 5px 5px 5px #4e3984;
+
+        &:hover {
+            background-color: $colorButtonHover;
+            color: white;
+        }
+    }
+
+    @media screen and (min-width: $widthMobile) {
+        button {
+            width: 200px;
+            height: 100px !important;
+        }
+    }
+}
+
+#facebook {
+    background-image: url("/images/facebook.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+
+    &:hover {
+        background-image: url("/images/facebook-hover.svg");
+        border-color: $colorMediaHover;
+    }
+}
+
+#twitter {
+    background-image: url("/images/twitter.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+
+    &:hover {
+        background-image: url("/images/twitter-hover.svg");
+        border-color: $colorMediaHover;
+    }
+}
+
+#instagram {
+    background-image: url("/images/instagram.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+
+    &:hover {
+        background-image: url("/images/instagram-hover.svg");
+        border-color: $colorMediaHover;
+    }
+}
+
+footer {
+    grid-area: footer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: white;
+}
+
+.white {
+    color: white;
+}

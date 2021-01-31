@@ -1,0 +1,213 @@
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #674bb1;
+  background-image: url("/images/illustration-mockups.svg"), url("/images/bg-mobile.svg"), url("/images/logo.svg");
+  background-repeat: no-repeat;
+  background-size: 300px, auto, 150px 50px;
+  background-position: center 120px, center 0px, calc(50% - 75px) 20px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px;
+      grid-template-columns: 300px;
+  -ms-grid-rows: 400px 1fr 50px;
+      grid-template-rows: 400px 1fr 50px;
+      grid-template-areas: "." "cont" "footer";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-image: url("/images/illustration-mockups.svg"), url("/images/bg-desktop.svg"), url("/images/logo.svg");
+    background-size: 700px, cover, 200px 50px;
+    background-position: 10% center, center 0px, 6% 50px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    -ms-grid-columns: 56% 38%;
+        grid-template-columns: 56% 38%;
+    -ms-grid-rows: 1fr 50px;
+        grid-template-rows: 1fr 50px;
+        grid-template-areas: ". cont" "footer footer";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: cont;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 1300px) {
+  #content {
+    height: 100%;
+    padding-top: 200px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: start;
+  }
+  #content h1 {
+    font-size: 3rem;
+  }
+  #content p {
+    font-size: 1.1rem;
+  }
+}
+
+#content div {
+  height: 100px;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#content div div {
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 1300px) {
+  #content div {
+    height: 100%;
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #content div div {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+  }
+}
+
+#content h1 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0px;
+}
+
+#content button {
+  width: 60%;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  color: #b1a0ee;
+  font-size: 0.8rem;
+  font-weight: 600;
+  -webkit-box-shadow: 5px 5px 5px #4e3984;
+          box-shadow: 5px 5px 5px #4e3984;
+}
+
+#content button:hover {
+  background-color: #e980e7;
+  color: white;
+}
+
+@media screen and (min-width: 1300px) {
+  #content button {
+    width: 200px;
+    height: 100px !important;
+  }
+}
+
+#facebook {
+  background-image: url("/images/facebook.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+#facebook:hover {
+  background-image: url("/images/facebook-hover.svg");
+  border-color: #ff4ebd;
+}
+
+#twitter {
+  background-image: url("/images/twitter.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+#twitter:hover {
+  background-image: url("/images/twitter-hover.svg");
+  border-color: #ff4ebd;
+}
+
+#instagram {
+  background-image: url("/images/instagram.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+#instagram:hover {
+  background-image: url("/images/instagram-hover.svg");
+  border-color: #ff4ebd;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: white;
+}
+
+.white {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
